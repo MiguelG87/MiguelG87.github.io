@@ -165,6 +165,7 @@ function loadCSS() {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = cssThemes[currentIndex];
+    link.setAttribute('data-css', 'true'); // Add a data attribute to identify the link
     head.appendChild(link);
 }
 const htmlThemes = [

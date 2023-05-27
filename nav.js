@@ -146,12 +146,12 @@ const borderColor = [
     '3px solid rgba(241, 72, 251, 1)'
 ]
 const cssThemes = [
-    '../CSS/main.css',
-    '../CSS/theme2.css',
-    '../CSS/theme3.css',
-    '../CSS/theme4.css',
-    '../CSS/theme5.css',
-    '../CSS/theme6.css',
+    'main.css',
+    'theme2.css',
+    'theme3.css',
+    'theme4.css',
+    'theme5.css',
+    'theme6.css',
 
 ]
 function loadCSS() {

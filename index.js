@@ -165,7 +165,6 @@ function loadCSS() {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = cssThemes[currentIndex];
-    link.setAttribute('data-css', 'true'); // Add a data attribute to identify the link
     head.appendChild(link);
 }
 const htmlThemes = [
@@ -281,8 +280,8 @@ neon2.style.background = neonBackgroundColor2[currentIndex];
 neon3.style.background = neonBackgroundColor3[currentIndex];
 neon4.style.background = neonBackgroundColor4[currentIndex];
 background.style.boxShadow = backgroundColor[currentIndex];
-loadCSS();
 htmlThemes[currentIndex]();
+loadCSS();
 inputElement.forEach(element => {
     element.style.border = borderColor[currentIndex];
 })

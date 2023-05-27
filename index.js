@@ -146,7 +146,7 @@ const borderColor = [
     '3px solid rgba(241, 72, 251, 1)'
 ]
 const cssThemes = [
-    '/css/main.css',
+    '/css/theme1.css',
     '/css/theme2.css',
     '/css/theme3.css',
     '/css/theme4.css',

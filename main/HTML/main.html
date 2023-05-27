@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel Gutierrez</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <script src="https://kit.fontawesome.com/2c915f58cb.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('ADPmWGGODXAGd82Po');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('service_pbwhq4l', 'template_tuboy7p', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                        alert("Message Sent Successfully");
+                        clearInput();
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                        alert("Message unsuccessfully");
+                    });
+            });
+        }
+    </script>
+    <script src="../js/nav.js" defer></script>
+</head>
+<body>
+<div class="background">
+</div>
+<header class="primary-header flex">
+    <div class="logo">
+        <img src="../img/M (3).png" class="logo" alt="logo">
+    </div>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><i
+            class="fa-solid fa-bars"></i><span class="sr-only">Menu</span>
+    </button>
+    <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+            <li class="active">
+                <a href="#home" class="scroll-link current">
+                    <span aria-hidden="true"></span>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#about" class="scroll-link">
+                    <span aria-hidden="true"></span>
+                    About Me
+                </a>
+            </li>
+            <li>
+                <a href="#projects" class="scroll-link">
+                    <span aria-hidden="true"></span>
+                    Projects
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="scroll-link">
+                    <span aria-hidden="true"></span>
+                    Contact Me
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div id="main" class="container">
+    <section class="page page1" id="home">
+        <div class="landing">
+            <a href="#" id="neon" class="neon">
+                <span class="neon1"></span>
+                <span class="neon2"></span>
+                <span class="neon3"></span>
+                <span class="neon4"></span>
+                Miguel Gutierrez
+            </a>
+        </div>
+    </section>
+    <section class="page page2" id="about">
+        <div class="aboutImg">
+            <img src="../img/profile.png" alt="img">
+        </div>
+        <div class="pageSetCont">
+            <h1>About Me</h1>
+            <div class="pageSet">
+                <p>
+                    Hello, my name is Miguel Gutierrez. As a Fullstack Developer and a United States Marine Corps
+                    Veteran, I
+                    am driven by a strong work ethic, a commitment to excellence, and the ability to thrive under
+                    pressure.
+                    With my expertise in front-end and back-end development, I can deliver innovative, user-friendly
+                    solutions that optimize functionality and enhance the user experience. I am passionate about
+                    technology
+                    and constantly strive to stay ahead of the curve, learning new skills and mastering emerging
+                    technologies. My goal is to create impactful, cutting-edge applications that solve real-world
+                    problems
+                    and make a difference in people's lives.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="page page3" id="projects">
+        <div class="projectTitle">
+            <h1>Projects</h1>
+        </div>
+        <div class="project">
+            <div class="box">
+                <div class="boxComp">
+                    <div class="boxItem1">
+                        <video  autoplay muted loop class="boxMedia videoPlayer">
+                            <source src="../img/mediaQuery.mov">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="boxComp">
+                    <div class="boxItem1">
+                        <video autoplay muted loop class="boxMedia videoPlayer">
+                            <source src="../img/webDesign.mov">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="boxComp">
+                    <div class="boxItem2">
+                        <video  autoplay muted loop class="boxMedia videoPlayer">
+                            <source src="../img/coffeeProject.mov">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="boxComp">
+                    <div class="boxItem2">
+                        <video autoplay muted loop class="boxMedia videoPlayer">
+                            <source src="../img/movieApp.mov">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="boxComp">
+                    <div class="boxItem3">
+                        <img src="../img/coming-soon.gif" width="250px" height="250px" alt="Coming Soon!">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="boxComp">
+                    <div class="boxItem3">
+                        <img src="../img/coming-soon.gif" width="250px" height="250px" alt="Coming Soon!">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page page4" id="contact">
+        <div class="contact1">
+            <h1>Connect with me</h1>
+            <h3>
+                <a href="https://github.com/MiguelG87" class="contactLink" target=”_blank”>
+                    Github
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </h3>
+            <h3>
+                <a href="https://linkedin.com/in/miguel-gutierrez-" class="contactLink" target=”_blank”>
+                    Linkedin
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </h3>
+            <h3>
+                <a href="https://docs.google.com/document/d/1ErXpz8yDVX7hHBlkWFwcOB5fbQTGvjuTNlmLmI9o7hk/edit?usp=sharing"
+                   class="contactLink" target=”_blank”>
+                    Resume
+                    <i class="fa-solid fa-file"></i>
+                </a>
+            </h3>
+        </div>
+        <div id="contact2" class="contact2">
+            <h1>Contact Me</h1>
+            <div class="contactCont">
+                <div class="reset">
+                    <button onclick="clearInput()"><i class="fa-solid fa-repeat"></i></button>
+                </div>
+                <form id="contact-form">
+                    <input type="hidden" name="contact_number">
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter Name..." name="user_name" class="inputSpace"><br>
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter Email..." name="user_email" class="inputSpace"><br>
+                    <label>Message</label>
+                    <textarea name="message" placeholder="Write Message..."></textarea><br>
+                    <input type="submit" value="Send" id="input">
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+<script>
+    //smooth scroll when clicked
+    const scrollLink = document.querySelectorAll('.scroll-link');
+    scrollLink.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    //adds and removes highlight on navbar link when clicked
+    const currentPage = document.querySelectorAll('.scroll-link');
+    currentPage.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            currentPage.forEach(navLink => navLink.classList.remove('current'));
+            link.classList.add('current');
+        });
+    });
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+        // Enable fullscreen functionality
+        video.addEventListener('click', function() {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) {
+                video.mozRequestFullScreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) {
+                video.msRequestFullscreen();
+            }
+        });
+    });
+</script>
+
+</html>
+

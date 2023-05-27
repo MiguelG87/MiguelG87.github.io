@@ -1,0 +1,1837 @@
+/*-----------------General---------------------------------*/
+html, body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color: #2196f3;
+
+}
+
+* {
+    font-family: "Yu Gothic";
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.background {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*-----------------Navbar---------------------------------*/
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+.primary-header {
+    align-items: center;
+    justify-content: space-between;
+    z-index: 8000;
+}
+
+nav {
+    padding-right: .2%;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.primary-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+    .primary-navigation {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+    }
+}
+
+
+.primary-indicators a > [aria-hidden="true"] {
+    font-weight: 700;
+    margin-inline-end: .75em;
+}
+
+@media (max-width: 35em) {
+    .primary-navigation {
+        --gap: 2em;
+
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+
+        transform: translateX(100%);
+        transition: transform 350ms ease-in;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background-repeat: no-repeat;
+        width: 2rem;
+        border: 0;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+        border-radius: 15px;
+    }
+
+}
+
+@media (min-width: 35em) and (max-width: 55em) {
+    .primary-navigation a > span[aria-hidden] {
+        display: none;
+    }
+}
+
+@media (min-width: 35em) {
+    .primary-navigation {
+        --gap: clamp(2rem, 5vw, 5rem);
+        padding-block: 2rem;
+        padding-inline: clamp(3rem, 8vm, 8rem);
+    }
+}
+
+@media (min-width: 1px) and (max-width: 368px) {
+    h1 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 12px;
+    }
+    .logo {
+        margin: 3% 5%;
+        width: 70px;
+        height: 70px;
+    }
+    .primary-navigation a {
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .aboutImg {
+        padding-top: 0;
+        padding-left: 35%;
+    }
+
+    .aboutImg img {
+        width: 95px;
+        height: 125px;
+    }
+
+    .pageSetCont {
+        padding: 2% 5%;
+        overflow: hidden;
+        font-size: 13px;
+    }
+
+    .pageSet {
+        padding: 1%;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+
+    }
+
+    .project {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center; /* Align items vertically at the center */
+        flex-direction: row;
+        text-align: center;
+        height: 55%;
+        overflow: hidden;
+    }
+
+    .box {
+        width: 48%;
+        height: 33%;
+        align-items: center;
+        align-self: center;
+    }
+    video {
+        display: flex;
+        padding-top: 10%;
+        justify-content: center;
+    }
+
+    .videoPlayer {
+        transform: scale(1.55);
+    }
+    .project img {
+        width: 150px;
+        align-items: center;
+        justify-items: center;
+        height: 120px;
+    }
+    .boxComp {
+        border-width: 1px;
+        border-color: white;
+        width: 300px;
+        height: 80%;
+        padding: 0;
+        margin-left: 5%;
+    }
+
+    .boxItem1, .boxItem2, .boxItem3 {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+        width: 45%;
+        height: 80%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .boxMedia {
+        top: 50%;
+        left: 50%;
+        height: 70%;
+        overflow: hidden;
+    }
+
+    #projects {
+        height: 100%;
+    }
+
+    .contact1 {
+        padding-top: 30%;
+        width: 100%;
+        height: 20%;
+    }
+
+    .contact2 {
+        padding-top: 1%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contactCont {
+        margin-left: 10%;
+    }
+
+    #contact-form input {
+        padding: 1%;
+        margin: 1%;
+        align-items: center;
+    }
+
+    .inputSpace {
+        width: 85%;
+    }
+
+    #input {
+        width: 88%;
+    }
+
+    #contact-form textarea {
+        width: 85%;
+        padding: 1%;
+        margin: 1%;
+        resize: none;
+        height: 145px;
+    }
+
+    #contact-form {
+        height: 50%;
+    }
+    .contactCont {
+        padding: 3% 0;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        width: 80%;
+        margin: auto;
+    }
+    .reset {
+        padding-left: 82%;
+    }
+
+    .reset button {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+    }
+
+    .landing {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Consolas;
+    }
+
+    .neon {
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        text-decoration: none;
+        font-size: 25px;
+        overflow: hidden;
+        transition: 0.2s;
+    }
+
+    .landing a:hover {
+        transition-delay: 1s;
+    }
+
+    .landing a span {
+        position: absolute;
+        display: block;
+    }
+
+    .neon1 {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+    }
+
+    .landing a:hover .neon1 {
+        left: 100%;
+        transition: 1s;
+    }
+
+    .neon3 {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+    }
+
+    .landing a:hover .neon3 {
+        right: 100%;
+        transition: 1s;
+        transition-delay: 0.5s;
+    }
+
+    .neon2 {
+        top: -100%;
+        right: -0;
+        width: 2px;
+        height: 100%;
+    }
+
+    .landing a:hover .neon2 {
+        top: 100%;
+        transition: 1s;
+        transition-delay: 0.25s;
+    }
+
+    .neon4 {
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+    }
+
+    .landing a:hover .neon4 {
+        bottom: 100%;
+        transition: 1s;
+        transition-delay: 0.75s;
+    }
+}
+@media (min-width: 369px) and (max-width: 560px) {
+    h1 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 12px;
+    }
+    .logo {
+        margin: 3% 5%;
+        width: 70px;
+        height: 70px;
+    }
+    .primary-navigation a {
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .aboutImg {
+        padding-top: 0;
+        padding-left: 35%;
+    }
+
+    .aboutImg img {
+        width: 95px;
+        height: 125px;
+    }
+
+    .pageSetCont {
+        padding: 2% 5%;
+        overflow: hidden;
+        font-size: 13px;
+    }
+
+    .pageSet {
+        padding: 1%;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+
+    }
+
+    .project {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center; /* Align items vertically at the center */
+        flex-direction: row;
+        text-align: center;
+        height: 55%;
+        overflow: hidden;
+    }
+
+    .box {
+        width: 50%;
+        height: 33%;
+        align-items: center;
+        align-self: center;
+    }
+    video {
+        display: flex;
+        padding-top: 10%;
+        justify-content: center;
+    }
+    .project img {
+        width: 175px;
+        align-items: center;
+        justify-items: center;
+        height: 130px;
+    }
+    .videoPlayer {
+        transform: scale(1.75);
+    }
+    .boxComp {
+        border-width: 1px;
+        border-color: white;
+        width: 350px;
+        height: 100%;
+        padding: 0;
+        margin-left: 12%;
+    }
+
+    .boxItem1, .boxItem2, .boxItem3 {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+        width: 45%;
+        height: 80%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .boxMedia {
+        top: 50%;
+        left: 50%;
+        height: 70%;
+        overflow: hidden;
+    }
+
+    #projects {
+        height: 100%;
+    }
+
+    .contact1 {
+        padding-top: 30%;
+        width: 100%;
+        height: 20%;
+    }
+
+    .contact2 {
+        padding-top: 1%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contactCont {
+        margin-left: 10%;
+    }
+
+    #contact-form input {
+        padding: 1%;
+        margin: 1%;
+        align-items: center;
+    }
+
+    .inputSpace {
+        width: 85%;
+    }
+
+    #input {
+        width: 88%;
+    }
+
+    #contact-form textarea {
+        width: 85%;
+        padding: 1%;
+        margin: 1%;
+        resize: none;
+        height: 145px;
+    }
+
+    #contact-form {
+        height: 50%;
+    }
+    .contactCont {
+        padding: 3% 0;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        width: 80%;
+        margin: auto;
+    }
+    .reset {
+        padding-left: 82%;
+    }
+
+    .reset button {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+    }
+
+    .landing {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Consolas;
+    }
+
+    .neon {
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        text-decoration: none;
+        font-size: 25px;
+        overflow: hidden;
+        transition: 0.2s;
+    }
+
+    .landing a:hover {
+        transition-delay: 1s;
+    }
+
+    .landing a span {
+        position: absolute;
+        display: block;
+    }
+
+    .neon1 {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+    }
+
+    .landing a:hover .neon1 {
+        left: 100%;
+        transition: 1s;
+    }
+
+    .neon3 {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+    }
+
+    .landing a:hover .neon3 {
+        right: 100%;
+        transition: 1s;
+        transition-delay: 0.5s;
+    }
+
+    .neon2 {
+        top: -100%;
+        right: -0;
+        width: 2px;
+        height: 100%;
+    }
+
+    .landing a:hover .neon2 {
+        top: 100%;
+        transition: 1s;
+        transition-delay: 0.25s;
+    }
+
+    .neon4 {
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+    }
+
+    .landing a:hover .neon4 {
+        bottom: 100%;
+        transition: 1s;
+        transition-delay: 0.75s;
+    }
+}
+
+@media (min-width: 560px) and (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+    .logo {
+        margin: 3% 5%;
+        width: 90px;
+        height: 90px;
+    }
+    .aboutImg {
+        padding-top: 0;
+        padding-left: 35%;
+    }
+    .primary-navigation a {
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .aboutImg img {
+        width: 125px;
+        height: 150px;
+    }
+
+    .pageSetCont {
+        padding: 2% 10% 40% 15%;
+    }
+
+    .pageSet {
+        padding: 1%;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+
+    }
+
+    .project {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center; /* Align items vertically at the center */
+        flex-direction: row;
+        text-align: center;
+        height: 55%;
+        overflow: hidden;
+    }
+
+    .box {
+        width: 50%;
+        height: 33%;
+        align-items: center;
+        align-self: center;
+    }
+    video {
+        display: flex;
+        padding-top: 10%;
+        justify-content: center;
+    }
+    .project img {
+        width: 170px;
+        align-items: center;
+        justify-items: center;
+        height: 150px;
+    }
+    .videoPlayer {
+        transform: scale(1.55);
+    }
+    .boxComp {
+        border-width: 1px;
+        border-color: white;
+        width: 350px;
+        height: 100%;
+        padding: 0 5%;
+        margin-left: 22%;
+    }
+
+    .boxItem1, .boxItem2, .boxItem3 {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+        width: 45%;
+        height: 85%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .boxMedia {
+        top: 50%;
+        left: 50%;
+        height: 70%;
+        overflow: hidden;
+    }
+
+    #projects {
+        height: 100%;
+    }
+
+    .contact1 {
+        padding-top: 30%;
+        width: 50%;
+    }
+
+    .contact2 {
+        padding-top: 30%;
+        width: 50%;
+        text-align: center;
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .reset {
+        padding-left: 58%;
+    }
+
+    .reset button {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+    }
+
+    #contact-form input {
+        padding: 1%;
+        margin: 1%;
+    }
+
+    #contact-form textarea {
+        width: 85%;
+        padding: 1%;
+        margin: 1%;
+        resize: none;
+        height: 145px;
+    }
+    .contactCont {
+        padding: 3% 0;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        width: 80%;
+        margin: auto;
+    }
+    .inputSpace {
+        width: 85%;
+    }
+
+    #input {
+        width: 88%;
+    }
+
+    .reset {
+        padding-left: 82%;
+    }
+
+    .landing {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Consolas;
+    }
+
+    .neon {
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        text-decoration: none;
+        font-size: 35px;
+        overflow: hidden;
+        transition: 0.2s;
+    }
+
+    .landing a:hover {
+        transition-delay: 1s;
+    }
+
+    .landing a span {
+        position: absolute;
+        display: block;
+    }
+
+    .neon1 {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 3px;
+    }
+
+    .landing a:hover .neon1 {
+        left: 100%;
+        transition: 1s;
+    }
+
+    .neon3 {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 3px;
+    }
+
+    .landing a:hover .neon3 {
+        right: 100%;
+        transition: 1s;
+        transition-delay: 0.5s;
+    }
+
+    .neon2 {
+        top: -100%;
+        right: -0;
+        width: 3px;
+        height: 100%;
+    }
+
+    .landing a:hover .neon2 {
+        top: 100%;
+        transition: 1s;
+        transition-delay: 0.25s;
+    }
+
+    .neon4 {
+        bottom: -100%;
+        left: 0;
+        width: 3px;
+        height: 100%;
+    }
+
+    .landing a:hover .neon4 {
+        bottom: 100%;
+        transition: 1s;
+        transition-delay: 0.75s;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 950px) {
+    h1 {
+        font-size: 35px;
+    }
+    .logo {
+        margin: 3% 5%;
+        width: 110px;
+        height: 110px;
+    }
+    .primary-navigation a {
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .aboutImg {
+        padding-top: 20%;
+        padding-left: 35%;
+    }
+
+    .aboutImg img {
+        width: 125px;
+        height: 150px;
+    }
+
+    .pageSetCont {
+        padding: 5% 18% 0 18%;
+    }
+
+    .pageSet {
+        padding: 1%;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+
+    }
+
+    .projectTitle {
+        text-align: center;
+        padding: 18% 3% 3%;
+    }
+
+    .project {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center; /* Align items vertically at the center */
+        flex-direction: row;
+        text-align: center;
+        height: 50%;
+        overflow: hidden;
+    }
+    video {
+        display: flex;
+        padding-top: 10%;
+        justify-content: center;
+    }
+    .videoPlayer {
+        transform: scale(1.55);
+    }
+    .project img {
+        width: 200px;
+        align-items: center;
+        justify-items: center;
+        height: 180px;
+    }
+    .box {
+        width: 33%;
+        height: 50%;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+    }
+
+    .boxComp {
+        border-width: 1px;
+        border-color: white;
+        width: 500px;
+        height: 100%;
+        padding: 0 5%;
+        margin-left: 10%;
+        overflow: hidden;
+    }
+
+    .boxItem1, .boxItem2, .boxItem3 {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+        width: 40%;
+        height: 75%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .boxMedia {
+        top: 50%;
+        left: 50%;
+        height: 70%;
+        overflow: hidden;
+    }
+
+    .contact1 {
+        padding-top: 20%;
+        width: 50%;
+    }
+
+    .contact2 {
+        padding-top: 20%;
+        margin-right: 2%;
+        width: 50%;
+        text-align: center;
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .reset {
+        padding-left: 82%;
+    }
+
+    .reset button {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+    }
+
+    #contact-form input {
+        padding: 1%;
+        margin: 1%;
+    }
+
+    #contact-form textarea {
+        width: 85%;
+        padding: 1%;
+        margin: 1%;
+        resize: none;
+        height: 145px;
+    }
+    .contactCont {
+        padding: 3% 0;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        width: 80%;
+        margin: auto;
+    }
+    .inputSpace {
+        width: 85%;
+    }
+
+    #input {
+        width: 88%;
+    }
+
+    .landing {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Consolas;
+    }
+
+    .neon {
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        text-decoration: none;
+        font-size: 50px;
+        overflow: hidden;
+        transition: 0.2s;
+    }
+
+    .landing a:hover {
+        transition-delay: 1s;
+    }
+
+    .landing a span {
+        position: absolute;
+        display: block;
+    }
+
+    .neon1 {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 4px;
+    }
+
+    .landing a:hover .neon1 {
+        left: 100%;
+        transition: 1s;
+    }
+
+    .neon3 {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 4px;
+    }
+
+    .landing a:hover .neon3 {
+        right: 100%;
+        transition: 1s;
+        transition-delay: 0.5s;
+    }
+
+    .neon2 {
+        top: -100%;
+        right: -0;
+        width: 4px;
+        height: 100%;
+    }
+
+    .landing a:hover .neon2 {
+        top: 100%;
+        transition: 1s;
+        transition-delay: 0.25s;
+    }
+
+    .neon4 {
+        bottom: -100%;
+        left: 0;
+        width: 4px;
+        height: 100%;
+    }
+
+    .landing a:hover .neon4 {
+        bottom: 100%;
+        transition: 1s;
+        transition-delay: 0.75s;
+    }
+}
+
+@media (min-width: 950px) and (max-width: 1300px) {
+    h1 {
+        font-size: 45px;
+    }
+    .logo {
+        margin: 3% 5%;
+        width: 120px;
+        height: 120px;
+    }
+    .primary-navigation a {
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #about {
+        display: flex;
+    }
+
+    .aboutImg {
+        padding: 18% 0 20% 15%;
+
+    }
+
+    .aboutImg img {
+        width: 200px;
+        height: 250px;
+    }
+
+    .pageSetCont {
+        padding: 14% 2% 20% 15%;
+        overflow: hidden;
+        width: 50%;
+    }
+    .pageSetCont h1 {
+        text-align: center;
+    }
+    .pageSet {
+        padding: 1%;
+        background: rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        font-size: 18px;
+    }
+    .contact1 {
+        padding-top: 13.5%;
+        width: 50%;
+    }
+
+    .contact2 {
+        padding-top: 13.5%;
+        margin-right: 10%;
+        width: 50%;
+        text-align: center;
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #contact-form input {
+        padding: 1%;
+        margin: 1%;
+    }
+
+    #contact-form textarea {
+        width: 85%;
+        padding: 1%;
+        margin: 1%;
+        resize: none;
+        height: 170px;
+    }
+    .contactCont {
+        padding: 3% 0;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        width: 80%;
+        margin: auto;
+    }
+    .inputSpace {
+        width: 85%;
+    }
+
+    #input {
+        width: 88%;
+    }
+
+    .reset {
+        padding-left: 78%;
+    }
+
+    .reset button {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 6px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projectTitle {
+        text-align: center;
+        padding: 11% 3% 3%;
+    }
+
+    .project {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center; /* Align items vertically at the center */
+        flex-direction: row;
+        text-align: center;
+        height: 55%;
+        overflow: hidden;
+    }
+
+    .box {
+        width: 33%;
+        height: 50%;
+        align-items: center;
+        align-self: center;
+    }
+
+    .boxComp {
+        border-width: 1px;
+        border-color: white;
+        width: 500px;
+        height: 95%;
+        padding: 0 5%;
+        margin-left: 10%;
+
+    }
+
+    .boxItem1, .boxItem2, .boxItem3 {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        width: 50%;
+        height: 81%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .boxMedia {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 80%;
+    }
+
+    #projects {
+        height: 100%;
+        overflow: hidden;
+    }
+    video {
+        display: flex;
+        padding-top: 5%;
+        justify-content: center;
+    }
+    .videoPlayer {
+        transform: scale(1.70);
+    }
+    .project img {
+        width: 255px;
+        align-items: center;
+        justify-items: center;
+        height: 210px;
+    }
+    .landing {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Consolas;
+    }
+
+    .neon {
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        text-decoration: none;
+        font-size: 75px;
+        overflow: hidden;
+        transition: 0.2s;
+        border-radius: 15px;
+    }
+
+    .landing a:hover {
+        transition-delay: .8s;
+    }
+
+    .landing a span {
+        position: absolute;
+        display: block;
+    }
+
+    .neon1 {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 6px;
+    }
+
+    .landing a:hover .neon1 {
+        left: 100%;
+        transition: 1s;
+    }
+
+    .neon3 {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 6px;
+    }
+
+    .landing a:hover .neon3 {
+        right: 100%;
+        transition: 1s;
+        transition-delay: 0.5s;
+    }
+
+    .neon2 {
+        top: -100%;
+        right: -0;
+        width: 6px;
+        height: 100%;
+    }
+
+    .landing a:hover .neon2 {
+        top: 100%;
+        transition: 1s;
+        transition-delay: 0.25s;
+    }
+
+    .neon4 {
+        bottom: -100%;
+        left: 0;
+        width: 6px;
+        height: 100%;
+    }
+
+    .landing a:hover .neon4 {
+        bottom: 100%;
+        transition: 1s;
+        transition-delay: 0.75s;
+    }
+}
+@media (min-width: 1301px) {
+    h1 {
+        font-size: 45px;
+    }
+    .logo {
+        margin: 3% 5%;
+        width: 120px;
+        height: 120px;
+    }
+    .primary-navigation a {
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #about {
+        display: flex;
+    }
+
+    .aboutImg {
+        padding: 18% 0 20% 15%;
+
+    }
+
+    .aboutImg img {
+        width: 200px;
+        height: 250px;
+    }
+
+    .pageSetCont {
+        padding: 14% 2% 20% 15%;
+        overflow: hidden;
+        width: 50%;
+    }
+    .pageSetCont h1 {
+        text-align: center;
+    }
+    .pageSet {
+        padding: 1%;
+        background: rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        font-size: 18px;
+    }
+    .contact1 {
+        padding-top: 13.5%;
+        width: 50%;
+    }
+
+    .contact2 {
+        padding-top: 13.5%;
+        margin-right: 10%;
+        width: 50%;
+        text-align: center;
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #contact-form input {
+        padding: 1%;
+        margin: 1%;
+    }
+
+    #contact-form textarea {
+        width: 85%;
+        padding: 1%;
+        margin: 1%;
+        resize: none;
+        height: 200px;
+    }
+    .contactCont {
+        padding: 3% 0;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        width: 80%;
+        margin: auto;
+    }
+    .inputSpace {
+        width: 85%;
+    }
+
+    #input {
+        width: 88%;
+    }
+
+    .reset {
+        padding-left: 84%;
+    }
+
+    .reset button {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 6px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projectTitle {
+        text-align: center;
+        padding: 11% 3% 3%;
+    }
+
+    .project {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center; /* Align items vertically at the center */
+        flex-direction: row;
+        text-align: center;
+        height: 55%;
+        overflow: hidden;
+    }
+
+    .box {
+        width: 33%;
+        height: 50%;
+        align-items: center;
+        align-self: center;
+    }
+
+    .boxComp {
+        border-width: 1px;
+        border-color: white;
+        width: 500px;
+        height: 85%;
+        padding: 0 5%;
+        margin-left: 25%;
+
+    }
+
+    .boxItem1, .boxItem2, .boxItem3 {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        width: 50%;
+        height: 81%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .boxMedia {
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 80%;
+    }
+
+    #projects {
+        height: 100%;
+        overflow: hidden;
+    }
+    video {
+        display: flex;
+        padding-top: 5%;
+        justify-content: center;
+    }
+    .videoPlayer {
+        transform: scale(1.70);
+    }
+    .project img {
+        width: 260px;
+        align-items: center;
+        justify-items: center;
+        height: 190px;
+    }
+    .landing {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Consolas;
+    }
+
+    .neon {
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        text-decoration: none;
+        font-size: 75px;
+        overflow: hidden;
+        transition: 0.2s;
+        border-radius: 15px;
+    }
+
+    .landing a:hover {
+        transition-delay: .8s;
+    }
+
+    .landing a span {
+        position: absolute;
+        display: block;
+    }
+
+    .neon1 {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 6px;
+    }
+
+    .landing a:hover .neon1 {
+        left: 100%;
+        transition: 1s;
+    }
+
+    .neon3 {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 6px;
+    }
+
+    .landing a:hover .neon3 {
+        right: 100%;
+        transition: 1s;
+        transition-delay: 0.5s;
+    }
+
+    .neon2 {
+        top: -100%;
+        right: -0;
+        width: 6px;
+        height: 100%;
+    }
+
+    .landing a:hover .neon2 {
+        top: 100%;
+        transition: 1s;
+        transition-delay: 0.25s;
+    }
+
+    .neon4 {
+        bottom: -100%;
+        left: 0;
+        width: 6px;
+        height: 100%;
+    }
+
+    .landing a:hover .neon4 {
+        bottom: 100%;
+        transition: 1s;
+        transition-delay: 0.75s;
+    }
+}
+
+@media (min-width: 1px) and (max-width: 768px) {
+    .aboutImg {
+        padding-top: 30%;
+        padding-left: 40%;
+    }
+
+    .pageSet {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .projectTitle {
+        text-align: center;
+        padding: 22% 3% 3%;
+    }
+
+    #projects {
+        height: 100%;
+    }
+
+}
+
+/*---------------------------------------------------------------------*/
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.primary-navigation {
+    border-radius: 5px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+a {
+    color: #2196f3;
+}
+
+li {
+    border-radius: 8px;
+    padding: 3px;
+}
+
+a:active {
+    color: #fff;
+}
+
+a:hover {
+    text-shadow: 0 0 7px #fff
+}
+
+.current {
+    text-shadow: 1px 0 1px #fff
+}
+
+/*-----------------body---------------------------------*/
+.container {
+    height: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-snap-stop: normal;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    scroll-snap-align: start;
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.page1 {
+    background: transparent;
+}
+
+.page2 {
+    background: transparent;
+}
+
+.page3 {
+    background: transparent;
+}
+
+.page4 {
+    background: transparent;
+}
+
+.contactLink {
+    text-decoration: none;
+
+}
+
+.aboutImg {
+    height: auto;
+    width: auto;
+}
+
+.pageSet {
+    height: auto;
+    width: auto;
+}
+
+.contact1 {
+    text-align: center;
+}
+
+.reset button {
+    padding: 3.5%;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+label {
+    display: none;
+}
+
+.landing h1 {
+    margin: auto;
+    text-align: center;
+    padding: 20% 0;
+    font-size: 75px;
+}
+
+input, textarea {
+    color: white;
+    background-color: transparent;
+    border-radius: 7px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.focused {
+    border-color: #2196f3;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: whitesmoke;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: whitesmoke;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: whitesmoke;
+}
+
+
+
+:not(textarea):not(input) {
+    caret-color: transparent !important;
+    cursor: default !important;
+}

@@ -275,6 +275,7 @@ const htmlThemes = [
     }
 ]
 let currentIndex = 0;
+document.body.style.color = colors[currentIndex];
 neon.style.color = neonButtonColors1[currentIndex];
 neon1.style.background = neonBackgroundColor1[currentIndex];
 neon2.style.background = neonBackgroundColor2[currentIndex];
@@ -285,6 +286,10 @@ htmlThemes[currentIndex]();
 loadCSS();
 inputElement.forEach(element => {
     element.style.border = borderColor[currentIndex];
+})
+const contactAnchors = document.querySelectorAll('.contact1 a')
+contactAnchors.forEach(element => {
+    element.style.color = colors[currentIndex];
 })
 button.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % colors.length;
@@ -305,7 +310,6 @@ button.addEventListener('click', () => {
     navItems.forEach(element => {
         element.style.color = neonButtonColors1[currentIndex];
     });
-    const contactAnchors = document.querySelectorAll('.contact1 a')
     contactAnchors.forEach(element => {
         element.style.color = colors[currentIndex];
     })
@@ -337,6 +341,36 @@ inputElement.forEach(element => {
         element.classList.remove('focused');
     });
 })
+
+//projects accordion
+document.addEventListener("DOMContentLoaded", () => {
+    const accordion = document.querySelector(".accordion");
+    accordion.addEventListener("click", (e) => {
+        const activePanel = e.target.closest(".accordion-panel");
+        if (!activePanel) return;
+        toggleAccordion(activePanel);
+    });
+
+    function toggleAccordion(panelToActivate) {
+        const buttons = panelToActivate.parentElement.querySelectorAll(".accordion-trigger");
+        const contents = panelToActivate.parentElement.querySelectorAll('.accordion-content')
+
+        buttons.forEach((button) => {
+            button.setAttribute("aria-expanded", 'false');
+        });
+
+        contents.forEach((content) => {
+            content.setAttribute("aria-hidden", 'true');
+        });
+
+        panelToActivate.querySelector('.accordion-content').setAttribute('aria-hidden', 'false');
+        panelToActivate.querySelector('button').setAttribute('aria-expanded', 'true');
+
+    }
+});
+
+
+
 
 
 

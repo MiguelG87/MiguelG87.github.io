@@ -439,6 +439,26 @@ function updatePlaceholderClasses(element) {
     element.classList.add(placeholderClasses[currentIndex]);
 }
 
+function lockScreenOrientation() {
+    if (screen.orientation && screen.orientation.lock && window.matchMedia) {
+        const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+        if (viewportWidth < 700) {
+            screen.orientation.lock('portrait')
+                .then(() => {
+                    console.log('Screen orientation locked');
+                })
+                .catch((error) => {
+                    console.error('Failed to lock screen orientation:', error);
+                });
+        }
+    }
+}
+
+lockScreenOrientation();
+
+window.addEventListener('orientationchange', lockScreenOrientation);
+
+
 
 
 

@@ -320,26 +320,38 @@ button.addEventListener('click', () => {
 
 
 });
-button.addEventListener('mouseover', () => {
+button.addEventListener('mouseover', handleMouseOver);
+button.addEventListener('mouseleave', handleMouseLeave);
+button.addEventListener('touchstart', handleTouchStart);
+button.addEventListener('touchend', handleTouchEnd);
+
+function handleMouseOver() {
+    updateNeonHoverStyles();
+}
+
+function handleMouseLeave() {
+    resetNeonHoverStyles();
+}
+
+function handleTouchStart() {
+    updateNeonHoverStyles();
+}
+
+function handleTouchEnd() {
+    resetNeonHoverStyles();
+}
+
+function updateNeonHoverStyles() {
     neonHover.style.color = neonButtonColors2[currentIndex];
     neonHover.style.background = neonButtonColors1[currentIndex];
     neonHover.style.boxShadow = neonBoxShadowColor[currentIndex];
+}
 
-    // Add event listener for mouseleave to revert the styles
-    button.addEventListener('mouseleave', () => {
-        neonHover.style.color = neonButtonColors1[currentIndex];
-        neonHover.style.background = 'transparent';
-        neonHover.style.boxShadow = '';
-    });
-    if (window.innerWidth <= 500) {
-        setTimeout(function() {
-            neonHover.style.color = neonButtonColors1[currentIndex];
-            neonHover.style.background = 'transparent';
-            neonHover.style.boxShadow = '';
-        }, 2000); // 10 seconds
-    }
-
-});
+function resetNeonHoverStyles() {
+    neonHover.style.color = neonButtonColors1[currentIndex];
+    neonHover.style.background = 'transparent';
+    neonHover.style.boxShadow = '';
+}
 
 inputElement.forEach(element => {
     element.addEventListener('focus', function () {

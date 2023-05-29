@@ -170,7 +170,8 @@ nav {
         text-align: center;
     }
 
-    .landing a:hover {
+    .landing a:hover,
+    .landing a:active {
         transition-delay: 1s;
     }
 
@@ -186,7 +187,8 @@ nav {
         height: 2px;
     }
 
-    .landing a:hover .neon1 {
+    .landing a:hover .neon1,
+    .landing a:active .neon1 {
         left: 100%;
         transition: 1s;
     }
@@ -198,7 +200,8 @@ nav {
         height: 2px;
     }
 
-    .landing a:hover .neon3 {
+    .landing a:hover .neon3,
+    .landing a:active .neon3 {
         right: 100%;
         transition: 1s;
         transition-delay: 0.5s;
@@ -211,7 +214,8 @@ nav {
         height: 100%;
     }
 
-    .landing a:hover .neon2 {
+    .landing a:hover .neon2,
+    .landing a:active .neon2 {
         top: 100%;
         transition: 1s;
         transition-delay: 0.25s;
@@ -224,7 +228,8 @@ nav {
         height: 100%;
     }
 
-    .landing a:hover .neon4 {
+    .landing a:hover .neon4,
+    .landing a:active .neon4 {
         bottom: 100%;
         transition: 1s;
         transition-delay: 0.75s;

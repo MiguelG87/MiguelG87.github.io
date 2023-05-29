@@ -130,7 +130,6 @@ nav {
     h1 {
         font-size: 20px;
     }
-
     h3 {
         font-size: 12px;
     }
@@ -146,104 +145,6 @@ nav {
         border-radius: 10px;
         font-size: 16px;
         font-weight: bold;
-    }
-
-    .aboutImg {
-        padding-top: 0;
-        padding-left: 35%;
-    }
-
-    .aboutImg img {
-        width: 95px;
-        height: 125px;
-    }
-
-    .pageSetCont {
-        padding: 2% 5%;
-        overflow: hidden;
-        font-size: 13px;
-    }
-
-    .pageSet {
-        padding: 1%;
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 20px;
-
-    }
-
-    #projects {
-        height: 100%;
-    }
-
-    .contact1 {
-        padding-top: 30%;
-        width: 100%;
-        height: 20%;
-    }
-
-    .contact2 {
-        padding-top: 1%;
-        width: 100%;
-        text-align: center;
-    }
-
-    .contactCont {
-        margin-left: 10%;
-    }
-
-    #contact-form input {
-        padding: 1%;
-        margin: 1%;
-        align-items: center;
-    }
-
-    .inputSpace {
-        width: 85%;
-    }
-
-    #input {
-        width: 88%;
-    }
-
-    #contact-form textarea {
-        width: 85%;
-        padding: 1%;
-        margin: 1%;
-        resize: none;
-        height: 145px;
-    }
-
-    #contact-form {
-        height: 50%;
-    }
-
-    .contactCont {
-        padding: 3% 0;
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 20px;
-        width: 80%;
-        margin: auto;
-    }
-
-    .reset {
-        padding-left: 82%;
-    }
-
-    .reset button {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 20px;
     }
 
     .landing {
@@ -266,6 +167,7 @@ nav {
         font-size: 25px;
         overflow: hidden;
         transition: 0.2s;
+        text-align: center;
     }
 
     .landing a:hover {
@@ -327,6 +229,115 @@ nav {
         transition: 1s;
         transition-delay: 0.75s;
     }
+
+    .aboutImg {
+        padding-top: 30%;
+        text-align: center;
+    }
+
+    .aboutImg img {
+        width: 95px;
+        height: 125px;
+    }
+
+    .pageSetCont {
+        padding: 2% 5%;
+        overflow: hidden;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .pageSet {
+        padding: 1%;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+
+    }
+
+    #projects {
+        height: 100%;
+    }
+
+    .contact1 {
+        padding-top: 27%;
+        width: 100%;
+        height: 15%;
+    }
+
+    .connectMe {
+        display: flex;
+    }
+
+    .connectMe h3 {
+        flex: 1;
+        text-align: center;
+    }
+
+    .contact2 {
+        padding-top: 5%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contactCont {
+        margin-left: 10%;
+    }
+
+    #contact-form input {
+        padding: 1%;
+        margin: 1%;
+        align-items: center;
+    }
+
+    .inputSpace {
+        width: 85%;
+    }
+
+    #input {
+        width: 88%;
+    }
+
+    #contact-form textarea {
+        width: 85%;
+        padding: 1%;
+        margin: 1%;
+        resize: none;
+        height: 100px;
+    }
+
+    #contact-form {
+        height: 50%;
+    }
+
+    .contactCont {
+        padding: 3% 0;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .reset {
+        padding-left: 82%;
+    }
+
+    .reset button {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+    }
+
 }
 
 @media (min-width: 369px) and (max-width: 560px) {
@@ -351,104 +362,6 @@ nav {
         font-weight: bold;
     }
 
-    .aboutImg {
-        padding-top: 0;
-        padding-left: 35%;
-    }
-
-    .aboutImg img {
-        width: 95px;
-        height: 125px;
-    }
-
-    .pageSetCont {
-        padding: 2% 5%;
-        overflow: hidden;
-        font-size: 13px;
-    }
-
-    .pageSet {
-        padding: 1%;
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 20px;
-
-    }
-
-    #projects {
-        height: 100%;
-    }
-
-    .contact1 {
-        padding-top: 30%;
-        width: 100%;
-        height: 20%;
-    }
-
-    .contact2 {
-        padding-top: 1%;
-        width: 100%;
-        text-align: center;
-    }
-
-    .contactCont {
-        margin-left: 10%;
-    }
-
-    #contact-form input {
-        padding: 1%;
-        margin: 1%;
-        align-items: center;
-    }
-
-    .inputSpace {
-        width: 85%;
-    }
-
-    #input {
-        width: 88%;
-    }
-
-    #contact-form textarea {
-        width: 85%;
-        padding: 1%;
-        margin: 1%;
-        resize: none;
-        height: 145px;
-    }
-
-    #contact-form {
-        height: 50%;
-    }
-
-    .contactCont {
-        padding: 3% 0;
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 20px;
-        width: 80%;
-        margin: auto;
-    }
-
-    .reset {
-        padding-left: 82%;
-    }
-
-    .reset button {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 20px;
-    }
-
     .landing {
         margin: 0;
         padding: 0;
@@ -466,9 +379,10 @@ nav {
         text-transform: uppercase;
         letter-spacing: 8px;
         text-decoration: none;
-        font-size: 25px;
+        font-size: 28px;
         overflow: hidden;
         transition: 0.2s;
+        text-align: center;
     }
 
     .landing a:hover {
@@ -530,6 +444,116 @@ nav {
         transition: 1s;
         transition-delay: 0.75s;
     }
+
+    .aboutImg {
+        padding-top: 35%;
+        text-align: center;
+    }
+
+    .aboutImg img {
+        width: 95px;
+        height: 125px;
+    }
+
+    .pageSetCont {
+        padding: 2% 5%;
+        overflow: hidden;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .pageSet {
+        padding: 1%;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+
+    }
+
+    #projects {
+        height: 100%;
+    }
+
+    .contact1 {
+        padding-top: 27%;
+        width: 100%;
+        height: 15%;
+    }
+
+    .connectMe {
+        display: flex;
+    }
+
+    .connectMe h3 {
+        flex: 1;
+        text-align: center;
+    }
+
+    .contact2 {
+        padding-top: 5%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contactCont {
+        margin-left: 10%;
+    }
+
+    #contact-form input {
+        padding: 1%;
+        margin: 1%;
+        align-items: center;
+    }
+
+    .inputSpace {
+        width: 85%;
+    }
+
+    #input {
+        width: 88%;
+    }
+
+    #contact-form textarea {
+        width: 85%;
+        padding: 1%;
+        margin: 1%;
+        resize: none;
+        height: 100px;
+    }
+
+    #contact-form {
+        height: 50%;
+    }
+
+    .contactCont {
+        padding: 3% 0;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .reset {
+        padding-left: 82%;
+    }
+
+    .reset button {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+    }
+
+
 }
 
 @media (min-width: 560px) and (max-width: 768px) {
@@ -543,9 +567,91 @@ nav {
         height: 90px;
     }
 
+    .landing {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Consolas;
+    }
+
+    .neon {
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        text-decoration: none;
+        font-size: 35px;
+        overflow: hidden;
+        transition: 0.2s;
+    }
+
+    .landing a:hover {
+        transition-delay: 1s;
+    }
+
+    .landing a span {
+        position: absolute;
+        display: block;
+    }
+
+    .neon1 {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 3px;
+    }
+
+    .landing a:hover .neon1 {
+        left: 100%;
+        transition: 1s;
+    }
+
+    .neon3 {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 3px;
+    }
+
+    .landing a:hover .neon3 {
+        right: 100%;
+        transition: 1s;
+        transition-delay: 0.5s;
+    }
+
+    .neon2 {
+        top: -100%;
+        right: -0;
+        width: 3px;
+        height: 100%;
+    }
+
+    .landing a:hover .neon2 {
+        top: 100%;
+        transition: 1s;
+        transition-delay: 0.25s;
+    }
+
+    .neon4 {
+        bottom: -100%;
+        left: 0;
+        width: 3px;
+        height: 100%;
+    }
+
+    .landing a:hover .neon4 {
+        bottom: 100%;
+        transition: 1s;
+        transition-delay: 0.75s;
+    }
+
     .aboutImg {
-        padding-top: 0;
-        padding-left: 35%;
+        padding-top: 30%;
+        text-align: center;
     }
 
     .primary-navigation a {
@@ -646,87 +752,6 @@ nav {
         padding-left: 82%;
     }
 
-    .landing {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        font-family: Consolas;
-    }
-
-    .neon {
-        position: relative;
-        display: inline-block;
-        padding: 15px 30px;
-        text-transform: uppercase;
-        letter-spacing: 6px;
-        text-decoration: none;
-        font-size: 35px;
-        overflow: hidden;
-        transition: 0.2s;
-    }
-
-    .landing a:hover {
-        transition-delay: 1s;
-    }
-
-    .landing a span {
-        position: absolute;
-        display: block;
-    }
-
-    .neon1 {
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 3px;
-    }
-
-    .landing a:hover .neon1 {
-        left: 100%;
-        transition: 1s;
-    }
-
-    .neon3 {
-        bottom: 0;
-        right: -100%;
-        width: 100%;
-        height: 3px;
-    }
-
-    .landing a:hover .neon3 {
-        right: 100%;
-        transition: 1s;
-        transition-delay: 0.5s;
-    }
-
-    .neon2 {
-        top: -100%;
-        right: -0;
-        width: 3px;
-        height: 100%;
-    }
-
-    .landing a:hover .neon2 {
-        top: 100%;
-        transition: 1s;
-        transition-delay: 0.25s;
-    }
-
-    .neon4 {
-        bottom: -100%;
-        left: 0;
-        width: 3px;
-        height: 100%;
-    }
-
-    .landing a:hover .neon4 {
-        bottom: 100%;
-        transition: 1s;
-        transition-delay: 0.75s;
-    }
 }
 
 @media (min-width: 769px) and (max-width: 950px) {
@@ -942,111 +967,6 @@ nav {
         font-weight: bold;
     }
 
-    #about {
-        display: flex;
-    }
-
-    .aboutImg {
-        padding: 18% 0 20% 15%;
-
-    }
-
-    .aboutImg img {
-        width: 200px;
-        height: 250px;
-    }
-
-    .pageSetCont {
-        padding: 14% 2% 20% 15%;
-        overflow: hidden;
-        width: 50%;
-    }
-
-    .pageSetCont h1 {
-        text-align: center;
-    }
-
-    .pageSet {
-        padding: 1%;
-        background: rgba(255, 255, 255, 0.35);
-        backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 20px;
-        font-size: 18px;
-    }
-
-    .contact1 {
-        padding-top: 13.5%;
-        width: 50%;
-    }
-
-    .contact2 {
-        padding-top: 13.5%;
-        margin-right: 10%;
-        width: 50%;
-        text-align: center;
-    }
-
-    #contact {
-        display: flex;
-        flex-direction: row;
-    }
-
-    #contact-form input {
-        padding: 1%;
-        margin: 1%;
-    }
-
-    #contact-form textarea {
-        width: 85%;
-        padding: 1%;
-        margin: 1%;
-        resize: none;
-        height: 170px;
-    }
-
-    .contactCont {
-        padding: 3% 0;
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 20px;
-        width: 80%;
-        margin: auto;
-    }
-
-    .inputSpace {
-        width: 85%;
-    }
-
-    #input {
-        width: 88%;
-    }
-
-    .reset {
-        padding-left: 78%;
-    }
-
-    .reset button {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 6px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .projectTitle {
-        text-align: center;
-        padding: 11% 3% 3%;
-    }
-
 
     .landing {
         margin: 0;
@@ -1129,6 +1049,113 @@ nav {
         bottom: 100%;
         transition: 1s;
         transition-delay: 0.75s;
+    }
+
+    #about {
+        display: flex;
+    }
+
+    .aboutImg {
+        padding: 25% 0 20% 15%;
+
+    }
+
+    .aboutImg img {
+        width: 200px;
+        height: 250px;
+    }
+
+    .pageSetCont {
+        padding: 14% 2% 20% 15%;
+        overflow: hidden;
+        width: 50%;
+    }
+
+    .pageSetCont h1 {
+        text-align: center;
+    }
+
+    .pageSet {
+        padding: 1%;
+        background: rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        font-size: 18px;
+    }
+
+    .projectTitle {
+        text-align: center;
+        padding: 11% 3% 1%;
+    }
+
+    .contact1 {
+        padding-top: 13.5%;
+        width: 45%;
+        padding-left: 5%;
+    }
+
+    .contact2 {
+        padding-top: 13.5%;
+        margin-right: 10%;
+        width: 45%;
+        padding-left: 5%;
+        text-align: center;
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #contact-form input {
+        padding: 1%;
+        margin: 1%;
+    }
+
+    #contact-form textarea {
+        width: 85%;
+        padding: 1%;
+        margin: 1%;
+        resize: none;
+        height: 170px;
+    }
+
+    .contactCont {
+        padding: 3% 0;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .inputSpace {
+        width: 85%;
+    }
+
+    #input {
+        width: 88%;
+    }
+
+    .reset {
+        padding-left: 78%;
+    }
+
+    .reset button {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 6px;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -1341,11 +1368,6 @@ nav {
 }
 
 @media (min-width: 1px) and (max-width: 768px) {
-    .aboutImg {
-        padding-top: 30%;
-        padding-left: 40%;
-    }
-
     .pageSet {
         padding-left: 5%;
         padding-right: 5%;
@@ -1541,33 +1563,43 @@ input, textarea {
 }
 
 @media (min-width: 1px) and (max-width: 368px) {
+    .accordion-title{
+        font-size: 12px;
+    }
+
     .accordion-title::after {
         content: "";
         position: absolute;
-        left: calc(((var(--_panel-gap) + var(--_button-size)) * -1) * 1.39);
-        width: calc(100% + (var(--_button-size) * 2));
-        height: calc(var(--_button-size) * 1.5);
+        left: calc(((var(--_panel-gap) + var(--_button-size)) * -1) * 1.75);
+        width: calc(100% + (var(--_button-size) * 4));
+        height: calc(var(--_button-size) * 2.35);
         background: hsl(0 0% 0% / 0.25);
         z-index: 1000;
         border-radius: 100vw;
     }
 
+    .accordion-content a {
+        font-size: 8px;
+    }
+
     .projectBody {
-        height: 100%;
+        height: 70%;
         overflow: hidden;
     }
 
     .wrapper {
-        max-height: 90%;
+        max-height: 95%;
         max-width: 65%;
+        overflow: hidden;
     }
 
     .accordion {
-        --_button-size: 1rem;
+        --_button-size: .25rem;
+        gap: .5rem;
     }
 
     .accordion-panel:has([aria-expanded="true"]) {
-        flex-basis: clamp(5rem, 10vh, 15rem);
+        flex-basis: clamp(6rem, 10.5vh, 16rem);
         flex-grow: 1;
     }
     .accordion-panel:has([aria-expanded="false"]) span {
@@ -1577,16 +1609,24 @@ input, textarea {
 }
 
 @media (min-width: 369px) and (max-width: 560px) {
+    .accordion-title{
+        font-size: 15px;
+    }
     .accordion-title::after {
         content: "";
         position: absolute;
-        left: calc(((var(--_panel-gap) + var(--_button-size)) * -1) * 1.39);
-        width: calc(100% + (var(--_button-size) * 2));
-        height: calc(var(--_button-size) * 1.5);
+        left: calc(((var(--_panel-gap) + var(--_button-size)) * -1) * 1.75);
+        width: calc(100% + (var(--_button-size) * 4));
+        height: calc(var(--_button-size) * 2.35);
         background: hsl(0 0% 0% / 0.25);
         z-index: 1000;
         border-radius: 100vw;
     }
+
+    .accordion-content a {
+        font-size: 10px;
+    }
+
     .accordion-panel:has([aria-expanded="false"]) span {
         opacity: 0;
     }
@@ -1613,12 +1653,16 @@ input, textarea {
     .accordion-title::after {
         content: "";
         position: absolute;
-        left: calc(((var(--_panel-gap) + var(--_button-size)) * -1) * 1.39);
-        width: calc(100% + (var(--_button-size) * 2));
-        height: calc(var(--_button-size) * 1.5);
-        background: hsl(0 0% 0% / 0.25);
+        left: calc(((var(--_panel-gap) + var(--_button-size)) * -1) * 1.79);
+        width: calc(100% + (var(--_button-size) * 4.5));
+        height: calc(var(--_button-size) * 2.40);
+        background-color: hsl(0 0% 0% / 0.25);
         z-index: 1000;
         border-radius: 100vw;
+    }
+    .accordion-title {
+        font-size: 1.5rem;
+        font-weight: 700;
     }
 
     .projectBody {
@@ -1652,6 +1696,11 @@ input, textarea {
         overflow-y: hidden;
     }
 
+    .accordion-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
     .accordion-panel:has([aria-expanded="true"]) {
         flex-basis: clamp(10rem, 30vh, 20rem);
         flex-grow: 1;
@@ -1677,6 +1726,11 @@ input, textarea {
         flex-direction: row;
         height: 25rem;
         overflow-y: hidden;
+    }
+
+    .accordion-title {
+        font-size: 1.5rem;
+        font-weight: 700;
     }
 
     .accordion-panel:has([aria-expanded="true"]) {
@@ -1711,7 +1765,10 @@ input, textarea {
         height: 25rem;
         overflow-y: hidden;
     }
-
+    .accordion-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
     .accordion-panel:has([aria-expanded="true"]) {
         flex-basis: clamp(5rem, 50vh, 15rem);
         flex-grow: 1;
@@ -1844,8 +1901,6 @@ a {
 }
 
 .accordion-title {
-    font-size: 1.5rem;
-    font-weight: 700;
     position: relative;
     isolation: isolate;
     display: grid;

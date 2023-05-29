@@ -62,15 +62,7 @@ nav {
     border-radius: 10px;
 }
 
-@supports (backdrop-filter: blur(1rem)) {
-    .primary-navigation {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-    }
-}
+
 
 
 .primary-indicators a > [aria-hidden="true"] {
@@ -129,6 +121,15 @@ nav {
 @media (min-width: 1px) and (max-width: 368px) {
     h1 {
         font-size: 20px;
+    }
+    @supports (backdrop-filter: blur(1rem)) {
+        .primary-navigation {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            border-left: 1px solid rgba(255, 255, 255, 0.25);
+        }
     }
     h3 {
         font-size: 12px;
@@ -360,6 +361,16 @@ nav {
         font-size: 20px;
     }
 
+    @supports (backdrop-filter: blur(1rem)) {
+        .primary-navigation {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            border-left: 1px solid rgba(255, 255, 255, 0.25);
+        }
+    }
+
     h3 {
         font-size: 12px;
     }
@@ -585,6 +596,16 @@ nav {
         font-size: 28px;
     }
 
+    @supports (backdrop-filter: blur(1rem)) {
+        .primary-navigation {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            border-left: 1px solid rgba(255, 255, 255, 0.25);
+        }
+    }
+
     .logo {
         margin: 3% 5%;
         width: 90px;
@@ -786,6 +807,16 @@ nav {
         font-size: 35px;
     }
 
+    @supports (backdrop-filter: blur(1rem)) {
+        .primary-navigation {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            border-left: 1px solid rgba(255, 255, 255, 0.25);
+        }
+    }
+
     .logo {
         margin: 3% 5%;
         width: 110px;
@@ -985,6 +1016,16 @@ nav {
 @media (min-width: 951px) and (max-width: 1300px) {
     h1 {
         font-size: 45px;
+    }
+
+    @supports (backdrop-filter: blur(1rem)) {
+        .primary-navigation {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            border-left: 1px solid rgba(255, 255, 255, 0.25);
+        }
     }
 
     .logo {
@@ -1200,6 +1241,16 @@ nav {
 @media (min-width: 1301px) {
     h1 {
         font-size: 45px;
+    }
+
+    @supports (backdrop-filter: blur(1rem)) {
+        .primary-navigation {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            border-left: 1px solid rgba(255, 255, 255, 0.25);
+        }
     }
 
     .logo {

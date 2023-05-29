@@ -83,12 +83,18 @@ const neon1 = document.querySelector(".neon1");
 const neon2 = document.querySelector(".neon2");
 const neon3 = document.querySelector(".neon3");
 const neon4 = document.querySelector(".neon4");
-const neonButtonColors1 = ['#2196f3', '#00C2BA', '#FAEA48', '#FE1438', '#A91079', '#FFACFC'];
+const neonButtonColors1 = ['#2196f3', '#00C2BA', '#FAEA48', '#FE1438', '#c5011f', '#FFACFC'];
 const neonButtonColors2 = ['#255784', '#037A90', '#FBB454', '#400000', '#2E0249', '#F148FB'];
 const navElement = document.querySelector('nav');
 const navItems = navElement.querySelectorAll('a');
 const background = document.querySelector('.background');
 const inputElement = document.querySelectorAll("input, textarea");
+const nameInput = document.getElementById("nameInput");
+const emailInput = document.getElementById("emailInput");
+const messageInput = document.getElementById("messageInput");
+const accordionTitles = document.querySelectorAll('.accordion-title');
+const accordionLinks = document.querySelectorAll('.accordion-links');
+const inputColors = ['#6ab8f7', '#007671', '#5b5303', '#400000', '#2E0249', '#f8ccd9'];
 const neonBackgroundColor1 = [
     'linear-gradient(90deg, transparent, #2196f3)',
     'linear-gradient(90deg, transparent, #00C2BA)',
@@ -154,6 +160,16 @@ const cssThemes = [
     '/css/theme6.css',
 
 ]
+
+const placeholderClasses = [
+    "placeholder1",
+    "placeholder2",
+    "placeholder3",
+    "placeholder4",
+    "placeholder5",
+    "placeholder6"
+]
+
 function loadCSS() {
     const head = document.head;
     // Remove previously loaded CSS file, if any
@@ -168,6 +184,7 @@ function loadCSS() {
     link.setAttribute('data-css', 'true'); // Add a data attribute to identify the link
     head.appendChild(link);
 }
+
 const htmlThemes = [
     function theme1Container() {
         const theme1HTML = `
@@ -274,7 +291,11 @@ const htmlThemes = [
         backgroundDiv.innerHTML = theme6HTML;
     }
 ]
+
 let currentIndex = 0;
+if (currentIndex >= 6){
+    currentIndex = 0;
+}
 document.body.style.color = colors[currentIndex];
 neon.style.color = neonButtonColors1[currentIndex];
 neon1.style.background = neonBackgroundColor1[currentIndex];
@@ -282,6 +303,18 @@ neon2.style.background = neonBackgroundColor2[currentIndex];
 neon3.style.background = neonBackgroundColor3[currentIndex];
 neon4.style.background = neonBackgroundColor4[currentIndex];
 background.style.boxShadow = backgroundColor[currentIndex];
+nameInput.style.color = inputColors[currentIndex];
+emailInput.style.color = inputColors[currentIndex];
+messageInput.style.color = inputColors[currentIndex];
+updatePlaceholderClasses(nameInput);
+updatePlaceholderClasses(emailInput);
+updatePlaceholderClasses(messageInput);
+accordionTitles.forEach(element => {
+    element.style.color = neonButtonColors1[currentIndex];
+});
+accordionLinks.forEach(element => {
+    element.style.color = neonButtonColors1[currentIndex];
+});
 htmlThemes[currentIndex]();
 loadCSS();
 inputElement.forEach(element => {
@@ -304,9 +337,21 @@ button.addEventListener('click', () => {
     neon4.style.background = neonBackgroundColor4[currentIndex];
     background.style.boxShadow = backgroundColor[currentIndex];
     document.body.style.color = colors[currentIndex];
+    nameInput.style.color = inputColors[currentIndex];
+    emailInput.style.color = inputColors[currentIndex];
+    messageInput.style.color = inputColors[currentIndex];
+    updatePlaceholderClasses(nameInput);
+    updatePlaceholderClasses(emailInput);
+    updatePlaceholderClasses(messageInput);
+    accordionTitles.forEach(element => {
+        element.style.color = neonButtonColors1[currentIndex];
+    });
+    accordionLinks.forEach(element => {
+        element.style.color = neonButtonColors1[currentIndex];
+    });
     inputElement.forEach(element => {
         element.style.border = borderColor[currentIndex];
-    })
+    });
     navItems.forEach(element => {
         element.style.color = neonButtonColors1[currentIndex];
     });
@@ -389,7 +434,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
+function updatePlaceholderClasses(element) {
+    element.classList.remove(...placeholderClasses);
+    element.classList.add(placeholderClasses[currentIndex]);
+}
 
 
 

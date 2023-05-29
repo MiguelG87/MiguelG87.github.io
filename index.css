@@ -334,8 +334,14 @@ nav {
         margin: auto;
     }
 
+    .redo {
+        height: 14px;
+        width: 14px;
+    }
+
+
     .reset {
-        padding-left: 82%;
+        padding-left: 75%;
     }
 
     .reset button {
@@ -344,7 +350,7 @@ nav {
         border: 1px solid rgba(255, 255, 255, 0.5);
         border-bottom: 1px solid rgba(255, 255, 255, 0.25);
         border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 20px;
+        border-radius: 10px;
     }
 
 }
@@ -553,8 +559,13 @@ nav {
         margin: auto;
     }
 
+    .redo {
+        height: 16px;
+        width: 16px;
+    }
+
     .reset {
-        padding-left: 82%;
+        padding-left: 80%;
     }
 
     .reset button {
@@ -563,7 +574,7 @@ nav {
         border: 1px solid rgba(255, 255, 255, 0.5);
         border-bottom: 1px solid rgba(255, 255, 255, 0.25);
         border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 20px;
+        border-radius: 12px;
     }
 
 
@@ -697,7 +708,6 @@ nav {
 
     }
 
-
     #projects {
         height: 100%;
     }
@@ -718,19 +728,6 @@ nav {
         flex-direction: row;
     }
 
-    .reset {
-        padding-left: 58%;
-    }
-
-    .reset button {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 20px;
-    }
-
     #contact-form input {
         padding: 1%;
         margin: 1%;
@@ -764,8 +761,22 @@ nav {
         width: 88%;
     }
 
+    .redo {
+        height: 16px;
+        width: 16px;
+    }
+
+    .reset button {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 12px;
+    }
+
     .reset {
-        padding-left: 82%;
+        padding-left: 78%;
     }
 
 }
@@ -786,100 +797,6 @@ nav {
         border-radius: 10px;
         font-size: 16px;
         font-weight: bold;
-    }
-
-    .aboutImg {
-        padding-top: 20%;
-        padding-left: 35%;
-    }
-
-    .aboutImg img {
-        width: 125px;
-        height: 150px;
-    }
-
-    .pageSetCont {
-        padding: 5% 18% 0 18%;
-    }
-
-    .pageSet {
-        padding: 1%;
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 20px;
-
-    }
-
-    .projectTitle {
-        text-align: center;
-        padding: 18% 3% 3%;
-    }
-
-
-    .contact1 {
-        padding-top: 20%;
-        width: 50%;
-    }
-
-    .contact2 {
-        padding-top: 20%;
-        margin-right: 2%;
-        width: 50%;
-        text-align: center;
-    }
-
-    #contact {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .reset {
-        padding-left: 82%;
-    }
-
-    .reset button {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 20px;
-    }
-
-    #contact-form input {
-        padding: 1%;
-        margin: 1%;
-    }
-
-    #contact-form textarea {
-        width: 85%;
-        padding: 1%;
-        margin: 1%;
-        resize: none;
-        height: 145px;
-    }
-
-    .contactCont {
-        padding: 3% 0;
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(25px);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 20px;
-        width: 80%;
-        margin: auto;
-    }
-
-    .inputSpace {
-        width: 85%;
-    }
-
-    #input {
-        width: 88%;
     }
 
     .landing {
@@ -963,6 +880,106 @@ nav {
         transition: 1s;
         transition-delay: 0.75s;
     }
+
+    .aboutImg {
+        padding-top: 20%;
+        padding-left: 35%;
+    }
+
+    .aboutImg img {
+        width: 125px;
+        height: 150px;
+    }
+
+    .pageSetCont {
+        padding: 5% 18% 0 18%;
+    }
+
+    .pageSet {
+        padding: 1%;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+
+    }
+
+    .projectTitle {
+        text-align: center;
+        padding: 18% 3% 3%;
+    }
+
+
+    .contact1 {
+        padding-top: 20%;
+        width: 50%;
+    }
+
+    .contact2 {
+        padding-top: 20%;
+        margin-right: 2%;
+        width: 50%;
+        text-align: center;
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #contact-form input {
+        padding: 1%;
+        margin: 1%;
+    }
+
+    #contact-form textarea {
+        width: 85%;
+        padding: 1%;
+        margin: 1%;
+        resize: none;
+        height: 145px;
+    }
+
+    .contactCont {
+        padding: 3% 0;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        width: 80%;
+        margin: auto;
+    }
+
+    .inputSpace {
+        width: 85%;
+    }
+
+    #input {
+        width: 88%;
+    }
+
+    .redo {
+        height: 18px;
+        width: 18px;
+    }
+
+    .reset {
+        padding-left: 82%;
+    }
+
+    .reset button {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+    }
+
 }
 
 @media (min-width: 951px) and (max-width: 1300px) {
@@ -1159,6 +1176,11 @@ nav {
         width: 88%;
     }
 
+    .redo {
+        height: 18px;
+        width: 18px;
+    }
+
     .reset {
         padding-left: 78%;
     }
@@ -1278,8 +1300,13 @@ nav {
         width: 88%;
     }
 
+    .redo {
+        height: 18px;
+        width: 18px;
+    }
+
     .reset {
-        padding-left: 84%;
+        padding-left: 81%;
     }
 
     .reset button {
@@ -1501,7 +1528,7 @@ a:hover {
 }
 
 .reset button {
-    padding: 3.5%;
+    padding-top: 5%;
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -1527,22 +1554,11 @@ input, textarea {
     border-color: #2196f3;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: whitesmoke;
-    opacity: 1; /* Firefox */
-}
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: whitesmoke;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-    color: whitesmoke;
-}
 
 
 :not(textarea):not(input) {
-    caret-color: transparent !important;
+    caret-color: grey !important;
     cursor: default !important;
 }
 
@@ -1918,7 +1934,8 @@ p {
 .accordion-title, .accordion-content {
     color: white;
     text-decoration: none;
-    text-shadow: 0 0 7px #fff;
+    text-shadow: 0 0 7px black,
+    0 0 14px black;
     z-index: 9000;
 }
 
@@ -1998,9 +2015,34 @@ a {
     z-index: 10;
 }
 
+
 .prevent-select {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.placeholder1::placeholder {
+    color: #6ab8f7;
+}
+
+.placeholder2::placeholder {
+    color: #007671;
+}
+
+.placeholder3::placeholder {
+    color: #5b5303;
+}
+
+.placeholder4::placeholder {
+    color: #400000;
+}
+
+.placeholder5::placeholder {
+    color: #2E0249;
+}
+
+.placeholder6::placeholder {
+    color: #f8ccd9;
 }

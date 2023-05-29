@@ -157,6 +157,10 @@ nav {
         font-family: Consolas;
     }
 
+    #neon {
+        touch-action: manipulation;
+    }
+
     .neon {
         position: relative;
         display: inline-block;
@@ -377,6 +381,10 @@ nav {
         font-family: Consolas;
     }
 
+    #neon {
+        touch-action: manipulation;
+    }
+
     .neon {
         position: relative;
         display: inline-block;
@@ -580,6 +588,9 @@ nav {
         align-items: center;
         min-height: 100vh;
         font-family: Consolas;
+    }
+    #neon {
+        touch-action: manipulation;
     }
 
     .neon {
@@ -1613,6 +1624,7 @@ input, textarea {
 
     .videoCase {
         display: none;
+        z-index: -9000;
     }
 
 }
@@ -1659,6 +1671,7 @@ input, textarea {
 
     .videoCase {
         display: none;
+        z-index: -9000;
     }
 
 }
@@ -1702,6 +1715,7 @@ input, textarea {
     }
     .videoCase {
         display: none;
+        z-index: -9000;
     }
 }
 

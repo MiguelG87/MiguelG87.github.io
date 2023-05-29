@@ -144,7 +144,7 @@ nav {
     .primary-navigation a {
         text-decoration: none;
         border-radius: 5px;
-        font-size: 16px;
+        font-size: 25px;
         font-weight: bold;
         padding: 1%;
         background: hsl(0 0% 0% / 0.15);
@@ -386,7 +386,7 @@ nav {
     .primary-navigation a {
         text-decoration: none;
         border-radius: 5px;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
         padding: 1%;
         background: hsl(0 0% 0% / 0.15);

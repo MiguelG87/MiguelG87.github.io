@@ -331,18 +331,14 @@ button.addEventListener('mouseover', () => {
         neonHover.style.background = 'transparent';
         neonHover.style.boxShadow = '';
     });
-});
+    if (window.innerWidth <= 500) {
+        setTimeout(function() {
+            neonHover.style.color = neonButtonColors1[currentIndex];
+            neonHover.style.background = 'transparent';
+            neonHover.style.boxShadow = '';
+        }, 2000); // 10 seconds
+    }
 
-button.addEventListener('touchstart', function() {
-    neonHover.style.color = neonButtonColors2[currentIndex];
-    neonHover.style.background = neonButtonColors1[currentIndex];
-    neonHover.style.boxShadow = neonBoxShadowColor[currentIndex];
-});
-
-button.addEventListener('touchend', function() {
-    neonHover.style.color = neonButtonColors1[currentIndex];
-    neonHover.style.background = 'transparent';
-    neonHover.style.boxShadow = '';
 });
 
 inputElement.forEach(element => {

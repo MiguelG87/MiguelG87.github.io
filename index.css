@@ -143,9 +143,11 @@ nav {
 
     .primary-navigation a {
         text-decoration: none;
-        border-radius: 10px;
+        border-radius: 5px;
         font-size: 16px;
         font-weight: bold;
+        padding: 1%;
+        background: hsl(0 0% 0% / 0.15);
     }
 
     .landing {
@@ -383,9 +385,11 @@ nav {
 
     .primary-navigation a {
         text-decoration: none;
-        border-radius: 10px;
+        border-radius: 5px;
         font-size: 16px;
         font-weight: bold;
+        padding: 1%;
+        background: hsl(0 0% 0% / 0.15);
     }
 
     .landing {

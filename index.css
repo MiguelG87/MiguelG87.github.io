@@ -122,9 +122,9 @@ nav {
     h1 {
         font-size: 20px;
     }
-    @supports (backdrop-filter: blur(1rem)) {
+    @supports (backdrop-filter: blur(3rem)) {
         .primary-navigation {
-            background: rgba(255, 255, 255, 0.65);
+            background: rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(25px);
             border: 1px solid rgba(255, 255, 255, 0.5);
             border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -146,8 +146,6 @@ nav {
         border-radius: 5px;
         font-size: 25px;
         font-weight: bold;
-        padding: 1%;
-        background: hsl(0 0% 0% / 0.15);
     }
 
     .landing {
@@ -363,9 +361,9 @@ nav {
         font-size: 20px;
     }
 
-    @supports (backdrop-filter: blur(1rem)) {
+    @supports (backdrop-filter: blur(4rem)) {
         .primary-navigation {
-            background: rgba(255, 255, 255, 0.65);
+            background: rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(25px);
             border: 1px solid rgba(255, 255, 255, 0.5);
             border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -388,8 +386,6 @@ nav {
         border-radius: 5px;
         font-size: 20px;
         font-weight: bold;
-        padding: 1%;
-        background: hsl(0 0% 0% / 0.15);
     }
 
     .landing {

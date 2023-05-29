@@ -122,7 +122,7 @@ nav {
     h1 {
         font-size: 20px;
     }
-    @supports (backdrop-filter: blur(3rem)) {
+    @supports (backdrop-filter: blur(8rem)) {
         .primary-navigation {
             background: rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(25px);
@@ -146,6 +146,7 @@ nav {
         border-radius: 5px;
         font-size: 25px;
         font-weight: bold;
+
     }
 
     .landing {
@@ -361,7 +362,7 @@ nav {
         font-size: 20px;
     }
 
-    @supports (backdrop-filter: blur(4rem)) {
+    @supports (backdrop-filter: blur(8rem)) {
         .primary-navigation {
             background: rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(25px);

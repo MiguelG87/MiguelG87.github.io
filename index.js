@@ -94,6 +94,8 @@ const emailInput = document.getElementById("emailInput");
 const messageInput = document.getElementById("messageInput");
 const accordionTitles = document.querySelectorAll('.accordion-title');
 const accordionLinks = document.querySelectorAll('.accordion-links');
+const logoIcons = document.querySelectorAll('.accordion-icon');
+const logoFillColor = ['#2196f3', '#00C2BA', '#FAEA48', '#FE1438', '#c5011f', '#FFACFC'];
 const inputColors = ['#6ab8f7', '#007671', '#5b5303', '#400000', '#2E0249', '#f8ccd9'];
 const neonBackgroundColor1 = [
     'linear-gradient(90deg, transparent, #2196f3)',
@@ -324,6 +326,13 @@ const contactAnchors = document.querySelectorAll('.contact1 a')
 contactAnchors.forEach(element => {
     element.style.color = colors[currentIndex];
 })
+logoIcons.forEach(element => {
+    const symbolId = element.querySelector('use').getAttribute('xlink:href').slice(1);
+    const referencedSymbol = document.getElementById(symbolId);
+    const symbolPath = referencedSymbol.querySelector('path');
+
+    symbolPath.style.fill = logoFillColor[currentIndex];
+})
 button.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % colors.length;
     htmlThemes[currentIndex]();
@@ -343,6 +352,13 @@ button.addEventListener('click', () => {
     updatePlaceholderClasses(nameInput);
     updatePlaceholderClasses(emailInput);
     updatePlaceholderClasses(messageInput);
+    logoIcons.forEach(element => {
+        const symbolId = element.querySelector('use').getAttribute('xlink:href').slice(1);
+        const referencedSymbol = document.getElementById(symbolId);
+        const symbolPath = referencedSymbol.querySelector('path');
+
+        symbolPath.style.fill = logoFillColor[currentIndex];
+    })
     accordionTitles.forEach(element => {
         element.style.color = neonButtonColors1[currentIndex];
     });
@@ -438,27 +454,6 @@ function updatePlaceholderClasses(element) {
     element.classList.remove(...placeholderClasses);
     element.classList.add(placeholderClasses[currentIndex]);
 }
-
-function lockScreenOrientation() {
-    if (screen.orientation && screen.orientation.lock && window.matchMedia) {
-        const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-        if (viewportWidth < 700) {
-            screen.orientation.lock('portrait')
-                .then(() => {
-                    console.log('Screen orientation locked');
-                })
-                .catch((error) => {
-                    console.error('Failed to lock screen orientation:', error);
-                });
-        }
-    }
-}
-
-lockScreenOrientation();
-
-window.addEventListener('orientationchange', lockScreenOrientation);
-
-
 
 
 

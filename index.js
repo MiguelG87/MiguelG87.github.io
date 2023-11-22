@@ -75,7 +75,7 @@ function clearInput() {
 }
 
 const button = document.getElementById('neon');
-const colors = ['#2196f3', '#00C2BA', '#FAEA48', '#FE1438', '#A91079', '#FFACFC'];
+const colors = ['#2196f3', '#00C2BA', '#c8bb39', '#FE1438', '#A91079', '#ff60f9'];
 const neonColors = ['#2196f3', '#00C2BA', '#FAEA48', '#FE1438', '#A91079', '#FFACFC'];
 const neon = document.querySelector(".neon");
 const neonHover = document.querySelector(".landing a");
@@ -94,7 +94,7 @@ const emailInput = document.getElementById("emailInput");
 const messageInput = document.getElementById("messageInput");
 const accordionTitles = document.querySelectorAll('.accordion-title');
 const accordionLinks = document.querySelectorAll('.accordion-links');
-const logoIcons = document.querySelectorAll('.accordion-icon');
+const accordionDates = document.querySelectorAll('.releaseDate');
 const logoFillColor = ['#2196f3', '#00C2BA', '#FAEA48', '#FE1438', '#c5011f', '#FFACFC'];
 const inputColors = ['#6ab8f7', '#007671', '#5b5303', '#400000', '#2E0249', '#f8ccd9'];
 const neonBackgroundColor1 = [
@@ -317,6 +317,9 @@ accordionTitles.forEach(element => {
 accordionLinks.forEach(element => {
     element.style.color = neonButtonColors1[currentIndex];
 });
+accordionDates.forEach(element => {
+    element.style.color = neonButtonColors1[currentIndex];
+});
 htmlThemes[currentIndex]();
 loadCSS();
 inputElement.forEach(element => {
@@ -326,13 +329,7 @@ const contactAnchors = document.querySelectorAll('.contact1 a')
 contactAnchors.forEach(element => {
     element.style.color = colors[currentIndex];
 })
-logoIcons.forEach(element => {
-    const symbolId = element.querySelector('use').getAttribute('xlink:href').slice(1);
-    const referencedSymbol = document.getElementById(symbolId);
-    const symbolPath = referencedSymbol.querySelector('path');
 
-    symbolPath.style.fill = logoFillColor[currentIndex];
-})
 button.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % colors.length;
     htmlThemes[currentIndex]();
@@ -352,17 +349,13 @@ button.addEventListener('click', () => {
     updatePlaceholderClasses(nameInput);
     updatePlaceholderClasses(emailInput);
     updatePlaceholderClasses(messageInput);
-    logoIcons.forEach(element => {
-        const symbolId = element.querySelector('use').getAttribute('xlink:href').slice(1);
-        const referencedSymbol = document.getElementById(symbolId);
-        const symbolPath = referencedSymbol.querySelector('path');
-
-        symbolPath.style.fill = logoFillColor[currentIndex];
-    })
     accordionTitles.forEach(element => {
         element.style.color = neonButtonColors1[currentIndex];
     });
     accordionLinks.forEach(element => {
+        element.style.color = neonButtonColors1[currentIndex];
+    });
+    accordionDates.forEach(element => {
         element.style.color = neonButtonColors1[currentIndex];
     });
     inputElement.forEach(element => {

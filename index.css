@@ -9,6 +9,7 @@ html, body {
 
 * {
     font-family: "Yu Gothic";
+    font: bold;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
@@ -124,7 +125,7 @@ nav {
     }
     @supports (backdrop-filter: blur(8rem)) {
         .primary-navigation {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 1);
             backdrop-filter: blur(25px);
             border: 1px solid rgba(255, 255, 255, 0.5);
             border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -260,7 +261,7 @@ nav {
 
     .pageSet {
         padding: 1%;
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.60);
         backdrop-filter: blur(25px);
         border: 1px solid rgba(255, 255, 255, 0.5);
         border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -364,7 +365,7 @@ nav {
 
     @supports (backdrop-filter: blur(8rem)) {
         .primary-navigation {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 1);
             backdrop-filter: blur(25px);
             border: 1px solid rgba(255, 255, 255, 0.5);
             border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -495,7 +496,7 @@ nav {
 
     .pageSet {
         padding: 1%;
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.60);
         backdrop-filter: blur(25px);
         border: 1px solid rgba(255, 255, 255, 0.5);
         border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -721,7 +722,7 @@ nav {
 
     .pageSet {
         padding: 1%;
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.60);
         backdrop-filter: blur(25px);
         border: 1px solid rgba(255, 255, 255, 0.5);
         border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -929,7 +930,7 @@ nav {
 
     .pageSet {
         padding: 1%;
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.60);
         backdrop-filter: blur(25px);
         border: 1px solid rgba(255, 255, 255, 0.5);
         border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -1152,7 +1153,7 @@ nav {
 
     .pageSet {
         padding: 1%;
-        background: rgba(255, 255, 255, 0.35);
+        background: rgba(255, 255, 255, 0.60);
         backdrop-filter: blur(25px);
         border: 1px solid rgba(255, 255, 255, 0.5);
         border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -1293,13 +1294,13 @@ nav {
 
     .pageSet {
         padding: 1%;
-        background: rgba(255, 255, 255, 0.35);
+        background: rgba(255, 255, 255, 0.60);
         backdrop-filter: blur(25px);
         border: 1px solid rgba(255, 255, 255, 0.5);
         border-bottom: 1px solid rgba(255, 255, 255, 0.25);
         border-left: 1px solid rgba(255, 255, 255, 0.25);
         border-radius: 20px;
-        font-size: 18px;
+        font-size: 25px;
     }
 
     .contact1 {
@@ -1832,6 +1833,9 @@ input, textarea {
 }
 
 @media (min-width: 951px) and (max-width: 1300px) {
+    .projectTitle h1 {
+        margin-top: 2%;
+    }
     .accordion {
         margin-top: 1rem;
         flex-direction: row;
@@ -1882,6 +1886,15 @@ input, textarea {
 }
 
 @media (min-width: 1301px) {
+    .projectTitle h1 {
+        margin-top: 1%;
+    }
+    .accordion {
+        margin-top: 1rem;
+        flex-direction: row;
+        height: 25rem;
+        overflow-y: hidden;
+    }
     .accordion {
         margin-top: 1rem;
         flex-direction: row;
@@ -2075,4 +2088,8 @@ a {
 
 .placeholder6::placeholder {
     color: #f8ccd9;
+}
+
+.releaseDate {
+    font-size: 75%;
 }
